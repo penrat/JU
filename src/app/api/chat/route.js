@@ -50,13 +50,6 @@ export async function POST(request) {
           { status: response.status }
         );
       }
-
-      const data = await response.json();
-      console.log("Image API response:", data);
-      return NextResponse.json({ 
-        reply: `สร้างรูปเสร็จแล้ว 🎨`, 
-        imageUrl: data.data[0].url 
-      });
     }
 
     // 🤖 ปกติ (ข้อความ + อาจมีภาพที่อัปโหลดมา)
